@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const button = document.createElement('button');
+        button.style.backgroundColor = 'blue';
+        button.style.padding = '1rem 1.5rem';
+        button.style.border = 'none';
+        button.span = 'button';
+        button.style.borderRadius = '.3rem'
+        button.style.color = 'white';
+        button.style.fontWeight = 'bold';
+        button.textContent = 'Click Me';
+        button.type = 'submit';
+        setInterval( () => {
+            let rand = Math.floor( Math.random() * (2560 - 1000));
+            const randcol = '#' + rand;
+            button.style.backgroundColor = randcol;
+            if (randcol <= '#2000' ) {
+                button.style.color = 'black'
+            } else if (randcol >= '#3000') {
+                button.style.color = 'white'
+            } else {
+                button.style.backgroundColor = randcol;
+            }
+            console.log(rand);
+        }, 1000);
+
+        button.addEventListener( 'click', () => {
+            // button.style.backgroundColor = 'red';
+            button.style.transition = '1s ease-in';
+            button.style.margin = '10rem';
+            button.style.padding = '2rem 3rem';
+            button.style.fontSize = '1.2rem';
+            setTimeout( () => {
+                
+            }, 1000)
+            
+        })
+        console.log(button);
+        document.body.append(button);
+    </script>
+</body>
+</html>
